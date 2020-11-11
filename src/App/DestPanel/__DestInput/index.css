@@ -1,0 +1,43 @@
+.DestPanel__Input {
+  padding: 0.75rem;
+  background-color: #000a12;
+  text-align: center;
+}
+
+.DestPanel__TextField 
+{
+  display: inline-block;
+  width: 90%;
+
+  padding: 0.5rem;
+
+  color: #FFF;
+  background-color: #4f5b62;
+
+  border: none;
+  border-radius: 0.2rem;
+  transition: border-width .2s ease-in;
+}
+
+.DestPanel__TextField:focus {
+  outline: none;
+  border-left: 0.5rem solid #69f0ae;
+  border-right: 0.5rem solid #69f0ae;
+}
+
+.DestPanel__TextField::-webkit-input-placeholder {
+  font-style: italic;
+  color:#bbc4cc;
+}
+.DestPanel__TextField::-moz-placeholder {
+  font-style: italic;
+  color:#bbc4cc;
+}
+.DestPanel__TextField:-moz-placeholder {
+  font-style: italic;
+  color:#bbc4cc;
+}
+.DestPanel__TextField:-ms-input-placeholder {
+  font-style: italic;
+  color:#bbc4cc;
+}

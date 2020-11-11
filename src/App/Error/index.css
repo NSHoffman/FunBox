@@ -1,0 +1,45 @@
+.Error {
+  position: fixed;
+  width: 100%;
+  min-width: 640px;
+  bottom: -300px;
+  left: 0;
+  background-color: #C72C41;
+  padding: 1.2rem 5%;
+  margin: 0;
+  opacity: 0;
+  transition: opacity .3s ease-out, bottom .3s ease-in;
+  z-index: 100;
+}
+
+.Error_isShown {
+  bottom: 0;
+  opacity: 1;
+}
+
+.Error__Title {
+  font-weight: 500;
+  font-size: 1.2rem;
+  color: #2D142C;
+}
+
+.Error__Message {
+  font-size: 0.9rem;
+  margin-bottom: 0;
+  color: #FFEBEE;
+}
+
+.Error__X-icon {
+  display: inline-block;
+  width: 3rem;
+  height: 3rem;
+  padding-top: 0.75rem;
+  font-size: 1.5rem;
+  text-align: center;
+  font-weight: 500;
+  color: #2D142C;
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+}

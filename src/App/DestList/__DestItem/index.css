@@ -1,0 +1,96 @@
+.DestList__Item 
+{
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  
+  padding: 1rem;
+
+  font-size: 1.15rem;
+  font-weight: 300;
+
+  background-color: white;
+  filter: grayscale(0.95);
+
+  cursor: grab;
+  transition: opacity .2s ease-out, filter .2s ease-in;
+}
+
+.DestList__Item:hover {
+  filter: none;
+}
+
+.DestList__Item:not(:last-of-type) {
+  border-bottom: 0.125rem solid #f0f0f0;
+}
+
+.DestList__Item:not(:only-of-type)::before {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 1.5rem;
+  width: 1px;
+  height: 100%;
+  border-left: 3px dashed #69f0ae;
+}
+
+.DestList__Item:first-of-type:not(:last-of-type)::before {
+  height: 50%;
+}
+
+.DestList__Item:last-of-type:not(:first-of-type)::before {
+  height: 50%;
+  top: 0;
+}
+
+.DestList__Item::after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 50%;
+  transform: translateY(50%);
+  left: calc(1.5rem - 5px);
+  width: 1rem;
+  height: 1rem;
+  background-color: #69f0ae;
+  border-radius: 50%;
+}
+
+.DestList__Item_isDragging {
+  opacity: 0;
+}
+
+.DestList__Text {
+  display: block;
+  word-break: break-all;
+  margin-left: 2rem;
+}
+
+.DestList__DeleteButton {
+  width: 2.15rem;
+  height: 2.15rem;
+  margin-left: 1rem;
+  padding: 0.5rem;
+
+  text-align: center;
+  color: #fff;
+  background-color: #ff4747;
+
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+
+  transition: transform .2s ease-in, background-color .1s ease-in;
+}
+
+.DestList__DeleteButton:hover {
+  transform: scale(1.05);
+}
+
+.DestList__DeleteButton:active {
+  outline: none;
+  background-color: #bb4747;
+}

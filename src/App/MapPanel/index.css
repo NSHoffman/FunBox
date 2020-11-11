@@ -1,0 +1,17 @@
+.MapPanel {
+  background-color: #e1e6e9;
+}
+
+.MapPanel_isLoading {
+  animation:  MapPanel_loading 1.5s infinite alternate-reverse;
+}
+
+@keyframes MapPanel_loading {
+  from {
+    background-color: #d9e5eb;
+  }
+
+  to {
+    background-color: #e1e6e9;
+  }
+}
